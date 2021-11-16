@@ -30,9 +30,9 @@ namespace InventoryService.Controllers
         // GET: CatalogController/Details/5
         // GET: api/Catalog/5
         [HttpGet("{catalogid}", Name = "Get")]
-        public IActionResult Get(long catalogId)
+        public IActionResult Get(long catalogid)
         {
-            var catalog = this._catalogRepository.GetCatalogById(catalogId);
+            var catalog = this._catalogRepository.GetCatalogById(catalogid);
             return new OkObjectResult(catalog);
         }
 
